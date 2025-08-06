@@ -1,0 +1,8 @@
+
+
+python -m pytest scripts/tests/test_cleaner.py -v
+
+python -m pytest scripts/tests/test_database.py -v
+
+
+python -m pytest scripts/tests/test_downloader.py -v

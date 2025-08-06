@@ -1,0 +1,26 @@
+{
+  "original_rows": 541909,
+  "rejected_rows": 0,
+  "cleaned_rows": 530103,
+  "rejection_rate": 0.0,
+  "transformations": [
+    "Renamed columns: {'invoiceno': 'invoice', 'stockcode': 'stock_code', 'invoicedate': 'invoice_date', 'unitprice': 'price', 'customerid': 'customer_id'}",
+    "Filled 135080 missing customer_id",
+    "Filled 1454 missing description",
+    "Converted invoice_date to datetime",
+    "Converted customer_id to string",
+    "Removed test transactions",
+    "Removed invalid quantity values",
+    "Removed invalid price values",
+    "Calculated total_amount"
+  ],
+  "missing_values": {
+    "customer_id": "135080",
+    "description": "1454"
+  },
+  "invalid_values": {
+    "test_transactions": 9291,
+    "quantity": 1336,
+    "price": 1179
+  }
+}
