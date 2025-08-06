@@ -38,7 +38,7 @@ A modular, production-grade ETL pipeline to extract, clean, validate, and load *
 
 ## 📊 Data Source
 
-- **[UCI Machine Learning Repository – Online Retail Dataset](https://archive.ics.uci.edu/ml/datasets/Online+Retail)**  
+- [UCI Machine Learning Repository – Online Retail Dataset](https://archive.ics.uci.edu/ml/datasets/Online+Retail)**  
 - Data: Transactions from a UK-based online store between 2009–2011.
 
 ---
@@ -54,4 +54,52 @@ Packages used:
 pandas, openpyxl
 mysql-connector-python
 requests, pytest, etc.
-< br/>
+...
+```
+---
+# 🖥️ Setup MySQL
+- CREATE DATABASE uci_online_retail
+- Ensure your scripts/config.py has the correct MySQL credentials.
+---
+#▶️ Run the Full Pipeline
+```bash
+python scripts/main.py
+...
+```
+---
+##🧰 CLI Options (via argparse)
+```bash
+python scripts/main.py --help
+optional arguments:
+  --input FILE          Custom dataset path
+  --dry-run             Run transform only (no DB load)
+  --only-clean          Skip extract/load steps
+  --only-load           Load previously cleaned data
+  --mode MODE           Load mode: full | incremental
+
+...
+```
+---
+#📁 Output
+- Cleaned dataset: data/cleaned_*.xlsx
+- Logs: logs/retail_etl.log
+- Loaded table: sales_db.transactions
+---
+##🧪 Testing
+-pytest tests/
+---
+##Includes:
+- Data quality validation
+- Download fallback logic
+- Mocked database operations
+---
+##👨‍💻 Author
+- Vahidahamad Maniyar
+- LinkedIn | GitHub
+- Aspiring Data Engineer • Power BI Expert • ETL Specialist
+---
+📄 License
+This project is licensed under the MIT License.
+
+---
+
