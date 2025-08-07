@@ -2,6 +2,8 @@
 
 A modular, production-grade ETL pipeline to extract, clean, validate, and load **UK-based online retail sales data** into a local MySQL database.
 
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/c23fb6ea-7528-425f-9411-f47afb965a42" />
+
 ---
 
 ## 📦 Project Structure
