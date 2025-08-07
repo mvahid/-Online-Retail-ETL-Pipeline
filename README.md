@@ -21,7 +21,6 @@ A modular, production-grade ETL pipeline to extract, clean, validate, and load *
 - **data/** — Raw and cleaned dataset files
 - **logs/** — Execution and error logs
 
-
 ---
 
 ## 🚀 Features
@@ -38,7 +37,7 @@ A modular, production-grade ETL pipeline to extract, clean, validate, and load *
 
 ## 📊 Data Source
 
-- [UCI Machine Learning Repository – Online Retail Dataset](https://archive.ics.uci.edu/ml/datasets/Online+Retail)**  
+- [UCI Machine Learning Repository – Online Retail Dataset](https://archive.ics.uci.edu/ml/datasets/Online+Retail)  
 - Data: Transactions from a UK-based online store between 2009–2011.
 
 ---
@@ -49,57 +48,64 @@ A modular, production-grade ETL pipeline to extract, clean, validate, and load *
 
 ```bash
 pip install -r requirements.txt
-
-Packages used:
-pandas, openpyxl
-mysql-connector-python
-requests, pytest, etc.
-...
+---
 ```
----
-# 🖥️ Setup MySQL
-- CREATE DATABASE uci_online_retail
-- Ensure your scripts/config.py has the correct MySQL credentials.
----
-#▶️ Run the Full Pipeline
+## Packages used:
+
+ - pandas
+ - openpyxl
+ - mysql-connector-python
+ - requests
+ - pytest
+ - etc.
+
+## 🛠️ Setup MySQL
+```bash
+CREATE DATABASE uci_online_retail;
+```
+## ▶️ Run the Full Pipeline
 ```bash
 python scripts/main.py
-...
 ```
----
-##🧰 CLI Options (via argparse)
+## 🧰 CLI Options (via argparse)
 ```bash
 python scripts/main.py --help
-optional arguments:
-  --input FILE          Custom dataset path
-  --dry-run             Run transform only (no DB load)
-  --only-clean          Skip extract/load steps
-  --only-load           Load previously cleaned data
-  --mode MODE           Load mode: full | incremental
-
-...
 ```
----
-#📁 Output
-- Cleaned dataset: data/cleaned_*.xlsx
-- Logs: logs/retail_etl.log
-- Loaded table: sales_db.transactions
----
-##🧪 Testing
--pytest tests/
----
-##Includes:
-- Data quality validation
-- Download fallback logic
-- Mocked database operations
----
-##👨‍💻 Author
-- Vahidahamad Maniyar
-- LinkedIn | GitHub
-- Aspiring Data Engineer • Power BI Expert • ETL Specialist
----
+### Available options:
+```bash
+--input FILE          Custom dataset path
+--dry-run             Run transform only (no DB load)
+--only-clean          Skip extract/load steps
+--only-load           Load previously cleaned data
+--mode MODE           Load mode: full | incremental
+```
+## 📁 Output
+ - Cleaned dataset: data/cleaned_*.xlsx
+ - Logs: logs/retail_etl.log
+ - Loaded table: sales_db.transactions
+## 🧪 Testing
+ - Run unit tests using:
+
+```bash
+python -m pytest scripts/tests/ -v
+python -m pytest scripts/tests/test_cleaner.py -v
+python -m pytest scripts/tests/test_database.py -v
+python -m pytest scripts/tests/test_downloader.py -v
+```
+
+Includes tests for:
+Data quality validation
+Download fallback logic
+Mocked database operations
+
+## 👨‍💻 Author
+  Vahidahamad Maniyar
+  LinkedIn | GitHub
+  Aspiring Data Engineer • Power BI Expert • ETL Specialist
+
+
 📄 License
 This project is licensed under the MIT License.
 
----
+
 
