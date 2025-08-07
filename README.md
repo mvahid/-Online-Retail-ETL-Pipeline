@@ -82,7 +82,7 @@ python scripts/main.py --help
 ## 📁 Output
  - Cleaned dataset: data/cleaned_*.xlsx
  - Logs: logs/retail_etl.log
- - Loaded table: sales_db.transactions
+ - Loaded table: uci_online_retail.transactions
 ## 🧪 Testing
  - Run unit tests using:
 
@@ -93,19 +93,19 @@ python -m pytest scripts/tests/test_database.py -v
 python -m pytest scripts/tests/test_downloader.py -v
 ```
 
-Includes tests for:
-Data quality validation
-Download fallback logic
-Mocked database operations
+### Includes tests for:
+- Data quality validation
+- Download fallback logic
+- Mocked database operations
 
 ## 👨‍💻 Author
-  Vahidahamad Maniyar
-  LinkedIn | GitHub
-  Aspiring Data Engineer • Power BI Expert • ETL Specialist
+  - Vahidahamad Maniyar
+  - LinkedIn | GitHub
+  - Aspiring Data Engineer • Power BI Expert • ETL Specialist
 
 
-📄 License
-This project is licensed under the MIT License.
+### 📄 License
+  - This project is licensed under the MIT License.
 
 
 
